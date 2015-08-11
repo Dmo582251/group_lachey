@@ -2,13 +2,23 @@
 <html>
 <head>
   <title>UnicornApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+	hellloooooo form should be here!!!
 
+	<div id='application-form'>
+			<section>
+				<input type="text" name='description' placeholder="Yo I didn't create this form properly">
+				<button id='submit'>Submit</button>
+			</section>
+		</div>
 
+<div id ='conversations'></div>
+<div id ='users'></div>
+<div id ='projects'></div>
 </body>
 </html>
