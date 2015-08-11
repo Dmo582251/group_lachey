@@ -10,8 +10,8 @@ App.Views.Project = Backbone.View.extend({
     },
     render: function(){
         var modelData = this.model.toJSON();
-        var compliledTemplate = this.template(modelData);
-        this.$el.html(compliledTemplate);
+        var compiledTemplate = this.template(modelData);
+        this.$el.html(compiledTemplate);
     },
     events: {
         'click .delete': 'deleteItem'

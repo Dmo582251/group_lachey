@@ -30,3 +30,13 @@ var App = {
 	Views: {}, 
 	Routers: {}
 };
+
+$(function() {
+	console.log('app loaded');
+	App.projectsCollection = new App.Collections.Projects;
+	App.projectsCollection.fetch({
+		reset: true,
+		success: function(data) {
+		App.projectView = new App.Views.Projects({collection: data});
+	}});
+});
