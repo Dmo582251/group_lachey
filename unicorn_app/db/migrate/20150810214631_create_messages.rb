@@ -1,7 +1,7 @@
 class CreateMessages < ActiveRecord::Migration
   def change
     create_table :messages do |t|
-      t.string :content
+      t.text :content
       t.references :user_id
       t.references :conversation_id
 

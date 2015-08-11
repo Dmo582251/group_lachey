@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :img_url
       t.text :bio
       t.text :education
-      t.string :skill
+      t.text :technology
       t.string :location
 
       t.timestamps null: false

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :destroy]
   resources :messages
   resources :conversations
-  resources :projects
+  resources :projects 
 
 
   #for sessions:   
