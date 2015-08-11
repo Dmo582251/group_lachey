@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+10.times do 
+	Project.create({
+		title: FFaker::HipsterIpsum.word,
+		description: FFaker::HipsterIpsum.paragraph,
+		technology: FFaker::HipsterIpsum.phrase
+		})
+end
