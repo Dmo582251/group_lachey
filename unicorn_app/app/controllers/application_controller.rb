@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    render layout: 'application', text: ' ' 
-	end
+    render layout: 'application', text: 'hello ' 
+  end
 
 	#This is for user login
 	def authenticate
