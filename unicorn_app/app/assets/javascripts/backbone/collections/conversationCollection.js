@@ -3,7 +3,11 @@ App.Collections.ConversationCollection = Backbone.Collection.extend({
 		console.log('New Conversation Collection Created');
 	},
 	url: '/conversations',
-	fetchByTerm: function
+	fetchById: function(id){
+		this.fetch({
+			url:this.url 
+		})
+	}
 
 
 
