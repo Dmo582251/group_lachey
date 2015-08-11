@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'users#new' 
+  root to: 'application#index' 
 
   resources :users, only: [:new, :create, :show, :destroy]
   resources :messages
