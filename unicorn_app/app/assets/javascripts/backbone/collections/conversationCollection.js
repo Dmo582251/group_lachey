@@ -5,18 +5,8 @@ App.Collections.ConversationCollection = Backbone.Collection.extend({
 	url: '/conversations',
 	fetchById: function(id){
 		this.fetch({
-<<<<<<< HEAD
-			url:this.url + '/' + id,
-			reset: false,
-			success: function(coll,data){
-				App.
-			}
-=======
-			url:this.url 
->>>>>>> wil
+			url: this.url + '/' + id,
+			data: {id: id}
 		})
 	}
-
-
-
-}) 
+})
