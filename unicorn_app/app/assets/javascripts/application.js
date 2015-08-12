@@ -37,6 +37,7 @@ $(function() {
 	App.projectsCollection.fetch({
 		reset: true,
 		success: function(data) {
-		App.projectView = new App.Views.Projects({collection: data});
-	}});
+			App.projectView = new App.Views.Projects({collection: data});
+		}
+	});
 });

@@ -4,7 +4,7 @@ App.Views.Projects = Backbone.View.extend({
         console.log("New Collection Project View Created");
         this.listenTo(this.collection, 'change', this.renderAllProjects);
         this.listenTo(this.collection, 'add', this.renderProject);
-        this.renderAllProjects();
+        // this.renderAllProjects();
     },
     renderAllProjects: function(){
         this.collection.each(this.renderProject, this);
@@ -13,5 +13,8 @@ App.Views.Projects = Backbone.View.extend({
         console.log('rendering the project');
         var newProjectView = new App.Views.Project({model : model});
         this.$el.append(newProjectView.el);
+    },
+    events: {
+        'click #projects_button': 'renderAllProjects', 
     }
 });
