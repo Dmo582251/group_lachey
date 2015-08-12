@@ -38,6 +38,8 @@ $(function() {
 		reset: true,
 		success: function(data) {
 			App.projectView = new App.Views.Projects({collection: data});
+			//Below is needed for accessing stuff in new project form w/in diff div
+			App.newProjectView = new App.Views.NewProject({collection:data});
 		}
 	});
 });
