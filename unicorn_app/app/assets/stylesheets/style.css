@@ -1,0 +1,10 @@
+#side-box{
+position: fixed;
+top: 0px;
+left: 70%;
+}
+#navigation{
+position: absolute;
+top: 0px;
+
+}

@@ -2,12 +2,14 @@ class ConversationsController < ApplicationController
 	
 	def index
 		@conversations = Conversation.all
+		@messages = Message.all
 		render json: @conversations
 	end
 
 	def show
 		@conversation = Conversation.find(params[:id])
-		render json: @conversation.messages
+		render json: @conversation
+
 	end
 
 	def new
@@ -16,6 +18,7 @@ class ConversationsController < ApplicationController
 
 	def create
 		@conversation = Conversation.create(conversation_params)
+		# @project.user_id = session[:current_user_id]
 		render json: @conversation
 	end
 
@@ -38,8 +41,8 @@ class ConversationsController < ApplicationController
 
 	private
 
-	def project_params
-		params.require(:conversation).permit(:title, :message_id)
+	def conversation_params
+		params.require(:conversation).permit(:title, :message_id, :message)
 	end
 
 end

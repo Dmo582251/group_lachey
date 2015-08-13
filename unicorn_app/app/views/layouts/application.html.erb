@@ -6,31 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<h1>Unicorn Site</h1>
-	
+	<body>
+		<div id='container'>
+	     	<div id='main-box'>
+	            <div id='navigation'>
+		    		<h1>Unicorn Site</h1>
+		            <button id="projects_button">Projects</button><button class="conversation">Messages</button><button id="home-button">Home</button>
+		            <div id="projects"></div>
+	            </div>
+	        </div>
 
-
-
-
-	<div id='about'>
-		<h1> About Unicorns!</h1>
-		<h2>Here is about unicorns</h2>
-		<p>we like unicorns about unicorns pizza soda coffee.....</p>
-	</div>
-
-
-<div id='main-box'>
-	
-</div>
-
-<div id='side-box'>
-	
-</div>
-	
-
-
-
-
-</body>
+	        <div id='side-box'>
+	            <h1>This is sidebox</h1>
+	            <div id="side-content"></div>
+	        </div>
+	    
+	    </div>	
+	</body>
 </html>
+
+
+
+

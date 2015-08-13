@@ -1,11 +1,11 @@
-App.View.Project = Backbone.View.extend({
+App.Views.Project = Backbone.View.extend({
     className: 'one-project',
     tagName: 'div',
     initialize: function(){
         console.log("New Project View Created");
         this.listenTo(this.model, 'change', this.render);
         this.listenTo(this.model, 'destroy', this.remove);
-        this.template = HandlebarsTemplates['item'];
+        this.template = HandlebarsTemplates['project'];
         this.render();
     },
     render: function(){

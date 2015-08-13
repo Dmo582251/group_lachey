@@ -30,3 +30,28 @@ var App = {
 	Views: {}, 
 	Routers: {}
 };
+
+$(function() {
+	console.log('app loaded');
+	App.projectsCollection = new App.Collections.Projects;
+	App.projectsCollection.fetch({
+		reset: true,
+		success: function(data) {
+		App.projectView = new App.Views.Projects({collection: data});
+	}});
+	App.conversationsCollection = new App.Collections.Conversations;
+	App.conversationsCollection.fetch({
+		reset: true,
+		success: function(convoData) {
+		App.conversationView = new App.Views.Conversation({collection: convoData});
+		App.newConversationView = new App.Views.NewConversation({collection: convoData});
+		}
+	})
+	App.messagesCollection = new App.Collections.Messages;
+	App.messagesCollection.fetch({
+		reset: true,
+		success: function(messData) {
+		App.messageView = new App.Views.Message({collection: messData});
+		}
+	})
+});
