@@ -18,7 +18,7 @@ App.Views.Conversation = Backbone.View.extend({
 	createConversation: function(){
 		var messageForm = HandlebarsTemplates['conversationForm'];
 		var compiledMessageTemplate = messageForm();
-		$('#side-content').append(compiledMessageTemplate);
+		$('#side-box').append(compiledMessageTemplate);
 	},
 	makeCreateButton: function() {
         var button = $("<button>").text("Create Message");
