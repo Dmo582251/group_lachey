@@ -5,36 +5,29 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src='http://underscorejs.org/underscore-min.js'></script>
 	<script src="http://backbonejs.org/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
-
-
-
 </head>
-<body>
-	
+	<body>
 
-</head>
+		<div id='container'>
+			<h1>Unicorn Site</h1>
 
-<body>
+			<div id='main-box'>
+				<button id="projects_button">Projects</button>
+				<div id="projects"></div>
+				<button id="home-button">Home</button>
+				<button class="conversation">Messages</button>
+			</div>
 
-	<div id='container'>
-		<h1>Unicorn Site</h1>
+			<div id='side-box'>
+				<h1>This is sidebox</h1>
+				<div id="side-content"></div>
+			</div>
 
-		<div id='main-box'>
-			<button id="projects_button">Projects</button>
-			<div id="projects"></div>
-			<button id="home-button">Home</button>
 		</div>
-
-		<div id='side-box'>
-			<h1>This is sidebox</h1>
-		</div>
-
-	</div>
-	
-</body>
+		
+	</body>
 </html>

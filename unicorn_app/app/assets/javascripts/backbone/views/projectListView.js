@@ -15,8 +15,11 @@ App.Views.Projects = Backbone.View.extend({
             this.firstTime = false;
         }
     },
+    renderAllItems: function(){
+        this.collection.each(this.renderProject, this);
+    },
     renderProject: function(model){
-        console.log('rendering the project');
+        console.log('rendering project view');
         var newProjectView = new App.Views.Project({model : model});
         this.$el.children()[1].appendChild(newProjectView.el);
     },
