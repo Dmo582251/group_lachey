@@ -8,7 +8,7 @@ App.Views.Projects = Backbone.View.extend({
         // this.renderAllProjects();
     },
     renderAllProjects: function(){
-        this.$el.children()[1].innerHTML = '';
+        this.$el.children()[3].innerHTML = '';
         this.collection.each(this.renderProject, this);
         if(this.firstTime) {
             this.makeCreateButton();
@@ -21,7 +21,7 @@ App.Views.Projects = Backbone.View.extend({
     renderProject: function(model){
         console.log('rendering project view');
         var newProjectView = new App.Views.Project({model : model});
-        this.$el.children()[1].appendChild(newProjectView.el);
+        this.$el.children()[3].appendChild(newProjectView.el);
     },
     makeCreateButton: function() {
         var button = $("<button>").text("Create");
