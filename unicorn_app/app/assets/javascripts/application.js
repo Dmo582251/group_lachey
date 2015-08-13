@@ -42,4 +42,21 @@ $(function() {
 			App.newProjectView = new App.Views.NewProject({collection:data});
 		}
 	});
+
+	//Conversation
+	App.conversationsCollection = new App.Collections.Conversations;
+		App.conversationsCollection.fetch({
+			reset: true,
+			success: function(convoData) {
+			App.conversationView = new App.Views.Conversation({collection: convoData});
+			App.newConversationView = new App.Views.NewConversation({collection: convoData});
+		}
+	});
+	App.messagesCollection = new App.Collections.Messages;
+		App.messagesCollection.fetch({
+			reset: true,
+			success: function(messData) {
+			App.messageView = new App.Views.Message({collection: messData});
+		}
+	});
 });

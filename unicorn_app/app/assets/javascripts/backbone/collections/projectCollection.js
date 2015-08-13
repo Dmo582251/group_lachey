@@ -4,4 +4,5 @@ App.Collections.Projects = Backbone.Collection.extend({
     initialize: function(){
         console.log("New Projects Collection Created");
     }
-})
+    
+});
