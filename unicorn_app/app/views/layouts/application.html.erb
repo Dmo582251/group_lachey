@@ -5,6 +5,7 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src='http://underscorejs.org/underscore-min.js'></script>
 	<script src="http://backbonejs.org/backbone-min.js"></script>
@@ -16,9 +17,9 @@
 			<h1>Unicorn Site</h1>
 
 			<div id='main-box'>
-				<button id="projects_button">Projects</button>
-				<button id="home-button">Home</button>
-				<button class="conversation">Messages</button>
+				<h2 id="projects_button">Projects</h2>
+				<h2 id="home-button">Home</h2>
+				<h2 class="conversation">Messages</h2>
 				<div id="projects"></div>
 			</div>
 
