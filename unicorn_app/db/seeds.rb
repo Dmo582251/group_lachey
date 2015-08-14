@@ -14,7 +14,7 @@
 	})
 end
 
-convo1 = Conversation.create({
+convo1 =Conversation.create({
 		title: "psql project ",
 		message_id: 1
 		})

@@ -1,10 +1,18 @@
 #side-box{
-position: fixed;
+position: absolute;
 top: 0px;
-left: 70%;
+left: 60%;
 }
 #navigation{
 position: absolute;
 top: 0px;
-
+}
+#meetup-container{
+overflow: scroll;
+height: 500px;
+}
+#map{
+	height: 800px;
+	width: 800px;
+	background-color: #CCC;
 }
