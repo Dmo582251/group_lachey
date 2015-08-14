@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
 
 	def create
 		@project = Project.create(project_params)
+		# @project.user_id = session[:current_user_id]
 		render json: @project
 	end
 
@@ -40,6 +41,6 @@ class ProjectsController < ApplicationController
 	private
 
 		def project_params
-			params.require(:project).permit(:title, :description, :technology, :user_id)
+			params.require(:project).permit(:title, :description, :technology)
 		end
 end
