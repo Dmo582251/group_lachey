@@ -1,0 +1,9 @@
+<h1>Articles</h1>
+{{#each articles}}
+<div id="article-div">
+	<h2>{{startup.at_css('.post-title').text}}</h2>
+	<p>{{startup.at_css('.byline a').text}}</p>
+	<h4>{{startup.at_css('.excerpt').text}}</h4>
+	<h3><a href="{{startup.at_css('.read-more')[:href]}}">Read More</a></h3>
+</div>
+{{/each}}

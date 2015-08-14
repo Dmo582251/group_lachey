@@ -30,3 +30,23 @@ var App = {
 	Views: {}, 
 	Routers: {}
 };
+
+
+
+
+$(function () {
+	App.signup = new App.Views.Signup();
+	App.login = new App.Views.Login();
+	App.users = new App.Collections.Users();
+
+});
+
+
+
+
+
+
+
+
+
+
