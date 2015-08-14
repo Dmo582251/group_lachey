@@ -33,6 +33,8 @@ var App = {
 
 $(function() {
 	console.log('app loaded');
+
+	//This is Projects stuff
 	App.projectsCollection = new App.Collections.Projects;
 	App.projectsCollection.fetch({
 		reset: true,
@@ -43,7 +45,7 @@ $(function() {
 		}
 	});
 
-	//Conversation
+	//This is Conversation Stuff
 	App.conversationsCollection = new App.Collections.Conversations;
 		App.conversationsCollection.fetch({
 			reset: true,
@@ -59,4 +61,4 @@ $(function() {
 			App.messageView = new App.Views.Message({collection: messData});
 		}
 	});
-});
+})
