@@ -19,13 +19,9 @@ ActiveRecord::Schema.define(version: 20150810214941) do
   create_table "conversations", force: :cascade do |t|
     t.string   "title"
     t.integer  "message_id"
-<<<<<<< HEAD
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-=======
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
->>>>>>> 72baa09a439ad25ede4148a288e6a15d7133d15a
+
   end
 
   create_table "conversations_messages", id: false, force: :cascade do |t|
@@ -37,13 +33,9 @@ ActiveRecord::Schema.define(version: 20150810214941) do
     t.text     "content"
     t.integer  "user_id"
     t.integer  "conversation_id"
-<<<<<<< HEAD
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-=======
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
->>>>>>> 72baa09a439ad25ede4148a288e6a15d7133d15a
+
   end
 
   create_table "projects", force: :cascade do |t|
