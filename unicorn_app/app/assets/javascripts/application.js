@@ -28,8 +28,8 @@ var App = {
 	Models: {}, 
 	Collections: {}, 
 	Views: {}, 
-	Routers: {}
-};
+	Routers: {},
+	};
 
 $(function() {
 	console.log('app loaded');
@@ -46,7 +46,7 @@ $(function() {
 	});
 
 	//This is Conversation Stuff
-	App.conversationsCollection = new App.Collections.Conversations;
+	App.conversationsCollection = new App.Collections.Conversations();
 	App.conversationsCollection.fetch({
 		reset: true,
 		success: function(convoData) {
@@ -54,11 +54,19 @@ $(function() {
 		App.newConversationView = new App.Views.NewConversation({collection: convoData});
 		}
 	})
-	App.messagesCollection = new App.Collections.Messages;
+	App.messagesCollection = new App.Collections.Messages();
 	App.messagesCollection.fetch({
 		reset: true,
 		success: function(messData) {
 		App.messageView = new App.Views.Message({collection: messData});
+		}
+	})
+	//meetup stuff
+	App.meetupCollection = new App.Collections.MeetupCollection();
+	App.meetupCollection.fetch({
+		reset:true,
+		success: function(meetupData){
+		App.meetupView = new App.Views.MeetupList({collection: meetupData});
 		}
 	})
 });

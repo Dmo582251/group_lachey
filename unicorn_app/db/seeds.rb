@@ -12,7 +12,7 @@
 		description: FFaker::HipsterIpsum.paragraph,
 		technology: FFaker::HipsterIpsum.phrase
 		})
-
+end
 convo1 =Conversation.create({
 		title: "psql project ",
 		message_id: 1
@@ -67,4 +67,4 @@ User.create({
 
 convo1.messages.push(mess1, mess4)
 convo2.messages.push(mess2, mess3)
->>>>>>> 72baa09a439ad25ede4148a288e6a15d7133d15a
+
