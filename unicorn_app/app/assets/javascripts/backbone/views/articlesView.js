@@ -6,12 +6,14 @@ App.Views.Article = Backbone.View.extend({
 
 	},
 	article: function (data) {
+		console.log(data)
 	this.$el.html(this.template(data));
 	this.$el.appendTo('#side-box');
 	},
 	dataScrape: function () {
+		var self = this;
 		$.get('/tech-crunch-data', function(data) {
-			this.article(data);
+			self.article(data);
 		});
 	}
 })
