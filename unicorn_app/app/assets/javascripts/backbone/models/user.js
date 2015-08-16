@@ -3,4 +3,4 @@ App.Models.User = Backbone.Model.extend({
 	initialize: function () {
 		console.log("created new user model");
 	}
-})
+});
