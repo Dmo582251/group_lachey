@@ -15,5 +15,6 @@ App.Views.NewProject = Backbone.View.extend({
     	technology: $("#technology").val()
     });
     $('#project-form').empty();
+    //this.$el.html('New Project Created!')
   }
 })

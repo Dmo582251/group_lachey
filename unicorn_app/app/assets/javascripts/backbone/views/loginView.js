@@ -14,7 +14,7 @@ App.Views.Login = Backbone.View.extend({
 	},
 	currentLogin: function (event) {
 		console.log('i was clicked');
-		event.preventDefault();
+		// event.preventDefault();
 		// var username = $('#username_login').val();
 		// var password = $('#password_login').val();
 		var formValues = {
@@ -32,7 +32,7 @@ App.Views.Login = Backbone.View.extend({
 				dataType: 'json',
 				data: formValues,
 				success: function () {
-					console.log(['login', this.data]);
+					//console.log(['login', this.data]);
 				}
 			});
 			
