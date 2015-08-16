@@ -21,6 +21,8 @@ App.Views.Meetup = Backbone.View.extend({
 			type: 'DELETE',
 			success: function () {
 				console.log('session was deleted')
+				$('#main-box').empty();
+				$('#side-box').empty();
 				var template1 = HandlebarsTemplates['signup']
 				var template2 = HandlebarsTemplates['login']
 				$('#main-box').html(template1);
