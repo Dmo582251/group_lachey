@@ -4,7 +4,7 @@ App.Views.Conversation = Backbone.View.extend({
 		console.log('conversation view created');
 		this.listenTo(this.model, 'change', this.render);
 		this.listenTo(this.model, 'destroy', this.remove);
-		this.template = HandlebarsTemplates['conversation'];		
+		// this.template = HandlebarsTemplates['conversation'];		
 	},
 	events: {
 		'click .conversation': 'render',
@@ -35,9 +35,12 @@ App.Views.Conversation = Backbone.View.extend({
 		};
 		console.log(conversationData);
 		console.log(messageData);
-		var conversationTemplate = this.template(data);
-		$('#projects').html(conversationTemplate);
+		// var conversationTemplate = this.template(data);	
+		var conversationTemplate = HandlebarsTemplates['conversation'];
+		var compiledConvoTemplate =conversationTemplate(data)
+		$('#projects').append(compiledConvoTemplate);
 		this.makeCreateButton();
+
 		// this.$el.html(conversationTemplate);
 	}
 });
