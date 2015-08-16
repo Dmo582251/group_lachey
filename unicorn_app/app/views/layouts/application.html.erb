@@ -5,25 +5,52 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- StyleSheets -->
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src='http://underscorejs.org/underscore-min.js'></script>
+	<script src="http://backbonejs.org/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+	
+<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
 </head>
-<body>
-	<div id="container">
 
-		<h1>DevOcean</h1>
-			<button id="home_button">Home</button>
-			<button class="logout">Logout</button>
+	<body>
 
-		<div id="main-box">
+		<div class="main-title">
+			<b><div class="dev">Dev</div><div class="ocean" style="color:#00E5FF">Ocean</div></b>
 		</div>
 
-		<div id="side-box">
+		<div class="container" style="clear: both;">
+				
+			<div id='main-box'>
+				<ul class="navbar">
+					<li id="home-button">Home</li>
+					<li class="profile_button">Profile</li>
+					<li id="projects_button">Projects</li>
+					<li class="conversation">Messages</li>
+				</ul>
+				<div id="projects"></div>
+			</div>
+
+			<div id='side-box'>
+			</div>
+
+			<div class="footer">
+				<p style="color:#00E5FF"><i class="fa fa-copyright"></i>2015 DevOcean Multimedia Group LLC All Right Reserved</p>
+				<div class="footer-links">
+					<ul>
+					<li><a href="http://mylittlepony.hasbro.com/en-us">About Us</a></li>
+					<li><a href="http://www.nasa.gov/about/career/index.html">Work for Us</a></li>
+					<li><a href="http://powerrangers.com">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</div>
-
-
-	<footer>
-	</footer>
-
-
-</body>
+	</body>
 </html>
+

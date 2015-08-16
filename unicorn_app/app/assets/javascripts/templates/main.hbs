@@ -1,0 +1,42 @@
+<h1>
+Funky Stuff
+</h1>
+
+
+<iframe id="gmap" 
+ width="600"
+ height="450"
+ frameborder="0" style="border:0"
+ src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXVySrtOJ18B_Pt05cia9LFjd4MnxYLls
+   &q=united states of america",allowfullscreen>
+</iframe>
+
+
+<button id="locate" onclick="getLocation()">Get Location</button>
+
+
+<p id="location"></p>
+
+
+<script>
+var x = document.getElementById("latitude");
+var z = document.getElementById("longitude");
+var y = document.getElementById("gmap");
+
+function getLocation() {
+   if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(showPosition);
+   } else { 
+       x.innerHTML = "Geolocation is not supported by this browser.";
+   }
+}
+
+function showPosition(position) {
+   x.placeholder = position.coords.latitude;
+   z.placeholder = position.coords.longitude;
+   x.value= position.coords.latitude;
+   z.value= position.coords.longitude;
+   y.src ="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXVySrtOJ18B_Pt05cia9LFjd4MnxYLls&q="+position.coords.latitude+","+position.coords.longitude
+}
+
+</script>

@@ -1,0 +1,131 @@
+#side-box{
+position: fixed;
+left: 70%;
+position: absolute;
+}
+
+#navigation{
+position: absolute;
+top: 0px;
+}
+
+#meetup-container{
+overflow: scroll;
+height: 500px;
+}
+#map{
+	height: 800px;
+	width: 800px;
+	background-color: #CCC;
+}
+
+html { 
+  background: linear-gradient(
+      rgba(64, 55, 58, 0.5), 
+      rgba(64, 55, 58, 0.5)
+    ), url("http://i.giphy.com/yENPyn21ogrjq.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family:'Raleway', sans-serif;
+}
+
+/*Main Title*/
+.main-title{
+  color:#FF5252;
+  font-size: 90px;
+  font-family:'Poiret One', cursive;
+  padding: 15px;
+  padding-top: 0px;
+
+}
+.dev, .ocean{
+  float: left;
+}
+
+/*Nav Bar Stuff*/
+.navbar{
+   list-style-type: none;
+    margin: 5px;
+    padding: 10px;
+    display: inline;
+}
+
+.navbar li:hover{
+  color:white;
+  text-decoration: underline;
+
+}
+
+.navbar li{
+  font-family:'Poiret One', cursive;
+  color: #FF5252;
+  float: left;
+  list-style-type: none;
+  margin: 5px;
+  margin-top: -10px;
+  padding: 5px;
+  display: inline;
+  font-size: 25px;
+}
+
+.container{
+  padding: 30px;
+  margin: auto;
+  background:#424242;
+  height: 600px;
+  width: 1700px;
+  margin-left: -10px;
+  
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+
+}
+
+h1{
+  font-family:'Poiret One', cursive;
+}
+
+/*Main Box Div*/
+#main-box{
+  
+}
+
+
+
+/*Side Box Div*/
+
+
+
+/*Footer*/
+.footer {
+  clear:      both;
+  margin:     0 0 20px;
+  padding:    0;
+  text-align: center;
+  list-style: none;
+}
+
+.footer li {
+  display:        inline;
+  margin:         0 10px;
+  color:          #FF5252;
+  font-size:      15px;
+  font-weight:    bold;
+  text-transform: uppercase;
+}
+
+.footer a {
+  color:           #FF5252;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/*"http://www.netanimations.net/animated_ocean_wave.gif" #FFCC80*/
+/**/
+
+
