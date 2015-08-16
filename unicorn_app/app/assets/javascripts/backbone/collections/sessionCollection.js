@@ -1,5 +1,5 @@
 App.Collections.Users = Backbone.Collection.extend({
-	url: '/users',
+	urlRoot: '/sessions',
 	model: App.Models.User,
 	initialize: function () {
 		console.log("created new collection user");

@@ -1,17 +1,28 @@
 class SessionsController < ApplicationController
 
+    def new
+        render json: session[:user_id]
+    end
+
     def create
-        #find user by specific username
-        user = User.find_by(username: params[:username])
-         if user && user.authenticate(params[:password])
-            #if user exists and you find password, they are allowed in
-            session[:current_user_id] = user.id
+        #To create a new user with sessions
+        @user = User.find_by(username: params[:username])
+        # @user.authenticate(params[:username], params[:password])
+
+        #if user exists and you find password, they are allowed in
+        if @user && @user.authenticate(params[:password])
+            create_user_session(@user) #session[:current_user_id] = @user.id
+            render json: @user
+        else
+            respond_to do |person|
+                person.json { render :json => {:error => "Username or Password does not exist."} }
+            end
         end
-        render json: user
     end
 
     def destroy
-        session[:current_user_id] = nil
-        redirect_to root_path
+        session[:user_id] = nil
+        destroy_user_session
+        render json: @user
     end
 end

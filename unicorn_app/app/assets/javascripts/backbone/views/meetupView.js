@@ -8,5 +8,24 @@ App.Views.Meetup = Backbone.View.extend({
 	meetUp: function () {
 		this.$el.html(this.template());
 		this.$el.appendTo('#main-box');
+		$('#home_button').show();
+		$('.logout').show();
+	},
+	events : {
+		'click .logout': 'signOut'
+	},
+	signOut: function () {
+		console.log('ready to get outta here');
+		$.ajax({
+			url: '/sessions',
+			type: 'DELETE',
+			success: function () {
+				console.log('session was deleted')
+				var template1 = HandlebarsTemplates['signup']
+				var template2 = HandlebarsTemplates['login']
+				$('#main-box').html(template1);
+				$('#side-box').html(template2);
+			}
+		});
 	}
 })
