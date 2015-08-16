@@ -19,6 +19,8 @@ App.Views.Projects = Backbone.View.extend({
         this.collection.each(this.renderProject, this);
     },
     renderProject: function(model){
+        $('#map').css('display','none');
+        $('#article-box').css('display','none');
         console.log('rendering project view');
         var newProjectView = new App.Views.Project({model : model});
         this.$el.children()[3].appendChild(newProjectView.el);

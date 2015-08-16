@@ -7,7 +7,7 @@ App.Views.Signup = Backbone.View.extend({
 	},
 	mainPage: function () {
 		this.$el.html(this.template());
-		this.$el.appendTo('#main-box');
+		this.$el.appendTo('#main-content');
 	}, 
 	events: {
 		'click #createUser': 'createNewUser'
@@ -44,12 +44,15 @@ App.Views.Signup = Backbone.View.extend({
 		$('#technology').val('');
 		$('#location').val('');
 
-		$('#main-box').empty();
-		$('#side-box').empty();
+		$('#user_create').empty();
+		$('#login').empty();
 
 
-		App.mettupView = new App.Views.Meetup();
+		App.meettupView = new App.Views.MeetupList();
 		App.articleView = new App.Views.Article();
+
+		$('#map').css('display','block');
+		$('.nav').css('display','block');
 	}
 });
 

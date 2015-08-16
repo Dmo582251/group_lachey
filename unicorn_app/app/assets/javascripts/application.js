@@ -74,4 +74,6 @@ $(function() {
 		App.meetupView = new App.Views.MeetupList({collection: meetupData});
 		}
 	})
+
+	App.map = new App.Views.Map();
 });

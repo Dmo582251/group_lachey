@@ -8,7 +8,7 @@ App.Views.Article = Backbone.View.extend({
 	article: function (data) {
 		console.log(data)
 	this.$el.html(this.template(data));
-	this.$el.appendTo('#side-box');
+	this.$el.appendTo('#article-box');
 	},
 	dataScrape: function () {
 		var self = this;

@@ -11,8 +11,26 @@ top: 0px;
 overflow: scroll;
 height: 500px;
 }
+#project-container{
+overflow: scroll;
+height: 500px;
+}
+#article-container{
+overflow: scroll;
+height: 400px;
+}
 #map{
-	height: 800px;
-	width: 800px;
+	
+
+/*	display: none;*/
+	top: 17px;
+	height: 300px;
+	width: 600px;
 	background-color: #CCC;
+
+
+}
+.nav{
+	display: none;
+	float:left;
 }

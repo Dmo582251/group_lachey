@@ -36,11 +36,13 @@ App.Views.Login = Backbone.View.extend({
 				}
 			});
 			
-			$('#main-box').empty();
-			$('#side-box').empty();
+			$('#user_create').empty();//main box
+			$('#login').empty();
 
-			App.meetupView = new App.Views.Meetup();
+			App.meettupView = new App.Views.MeetupList();
 			App.articleView = new App.Views.Article();
+			$('#map').css('display','block');
+			$('.nav').css('display','block');
 		}
 
 

@@ -1,13 +1,18 @@
 
 App.Views.MeetupList = Backbone.View.extend({
-	el: '#side-box',
+	// el: '#container',
 	initialize: function(){
 		console.log('meetup view works');
 		this.renderMeetup();
-		// this.renderMap();
+		//this.renderMap();
 		// this.listenTo(this.collection, 'reset', this.addAll);
 	},
+	// events:{
+	// 	'click #createUser': 'renderMeetup',
+	// 	'click #userLogin': 'renderMeetup'
+	// },
 	renderMeetup: function(){
+		console.log('rendermeetup fired')
 		var meetupList = App.meetupCollection.toJSON();
 		console.log(meetupList);
 		var data = {
@@ -16,7 +21,7 @@ App.Views.MeetupList = Backbone.View.extend({
 
 		var meetupTemplate = HandlebarsTemplates['meetup'];
 		var compiledMeetupTemplate = meetupTemplate(data);
-		this.$el.append(compiledMeetupTemplate);
+		$('#side-box').append(compiledMeetupTemplate);
 		console.log(data.meets)
 		$('#main-box').append(HandlebarsTemplates['map']); 
 	},
