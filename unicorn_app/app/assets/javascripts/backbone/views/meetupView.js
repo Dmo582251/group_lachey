@@ -19,7 +19,7 @@ App.Views.MeetupList = Backbone.View.extend({
 			meets: meetupList[0].results
 		}
 
-		var meetupTemplate = HandlebarsTemplates['meetup'];
+		var meetupTemplate = HandlebarsTemplates['meetUp'];
 		var compiledMeetupTemplate = meetupTemplate(data);
 		$('#side-box').append(compiledMeetupTemplate);
 		console.log(data.meets)
