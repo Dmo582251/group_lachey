@@ -15,6 +15,7 @@
 end
 
 convo1 = Conversation.create({
+
 		title: "psql project ",
 		message_id: 1
 		})
@@ -66,6 +67,8 @@ User.create({
 	location: "New York"
 	})
 
-convo1.messages.push(mess1, mess4)
-convo2.messages.push(mess2, mess3)
+
+	convo1.messages.push(mess1, mess4)
+	convo2.messages.push(mess2, mess3)
+
 
