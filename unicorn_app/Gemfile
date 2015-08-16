@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'httparty'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
@@ -27,9 +27,13 @@ gem 'backbars'
 
 gem 'nokogiri'
 
+gem 'better_errors'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
+
+gem 'gon'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -43,6 +47,9 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'ffaker'
+
+  #For chrome errors to look clean and more readable
+  gem 'meta_request'
 
   
 

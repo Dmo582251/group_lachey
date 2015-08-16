@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+	# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -11,13 +11,14 @@
 		title: FFaker::HipsterIpsum.word,
 		description: FFaker::HipsterIpsum.paragraph,
 		technology: FFaker::HipsterIpsum.phrase
-		})
+	})
+end
 
 convo1 =Conversation.create({
 		title: "psql project ",
 		message_id: 1
 		})
-convo2 =Conversation.create({
+convo2 = Conversation.create({
 		title: "ruby on rails",
 		message_id: 2
 		})
@@ -26,7 +27,7 @@ mess1 = Message.create({
 		content: "I would like to make a psql DB",
 		user_id: 1,
 		})
-mess2 =Message.create({
+mess2 = Message.create({
 		content: "Hi I like your project",
 		user_id: 2,
 		})
@@ -34,7 +35,7 @@ mess3 = Message.create({
 		content: "so what?",
 		user_id: 1,
 		})
-mess4 =Message.create({
+mess4 = Message.create({
 		content: "i Don't want to work on your project, i hate you!",
 		user_id: 2,
 		})

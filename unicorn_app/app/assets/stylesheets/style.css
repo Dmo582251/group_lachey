@@ -1,6 +1,22 @@
 #side-box{
 position: fixed;
 left: 70%;
+position: absolute;
+}
+
+#navigation{
+position: absolute;
+top: 0px;
+}
+
+#meetup-container{
+overflow: scroll;
+height: 500px;
+}
+#map{
+	height: 800px;
+	width: 800px;
+	background-color: #CCC;
 }
 
 html { 
@@ -55,20 +71,20 @@ html {
 }
 
 .container{
-	padding: 30px;
+  padding: 30px;
   margin: auto;
   background:#424242;
   height: 600px;
   width: 1700px;
   margin-left: -10px;
-	
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
+  
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 
 }
 
 h1{
-	font-family:'Poiret One', cursive;
+  font-family:'Poiret One', cursive;
 }
 
 /*Main Box Div*/
@@ -111,3 +127,5 @@ h1{
 
 /*"http://www.netanimations.net/animated_ocean_wave.gif" #FFCC80*/
 /**/
+
+

@@ -28,12 +28,16 @@ var App = {
 	Models: {}, 
 	Collections: {}, 
 	Views: {}, 
-	Routers: {}
-};
+	Routers: {},
+	};
+
 
 $(function() {
 	console.log('app loaded');
 
+	App.signup = new App.Views.Signup();
+	App.login = new App.Views.Login();
+	App.users = new App.Collections.Users();
 	//This is Projects stuff
 	App.projectsCollection = new App.Collections.Projects;
 	App.projectsCollection.fetch({
@@ -46,19 +50,29 @@ $(function() {
 	});
 
 	//This is Conversation Stuff
-	App.conversationsCollection = new App.Collections.Conversations;
-		App.conversationsCollection.fetch({
-			reset: true,
-			success: function(convoData) {
-			App.conversationView = new App.Views.Conversation({collection: convoData});
-			App.newConversationView = new App.Views.NewConversation({collection: convoData});
+	App.conversationsCollection = new App.Collections.Conversations();
+	App.conversationsCollection.fetch({
+		reset: true,
+		success: function(convoData) {
+		App.conversationView = new App.Views.Conversation({collection: convoData});
+		App.newConversationView = new App.Views.NewConversation({collection: convoData});
 		}
-	});
-	App.messagesCollection = new App.Collections.Messages;
-		App.messagesCollection.fetch({
-			reset: true,
-			success: function(messData) {
-			App.messageView = new App.Views.Message({collection: messData});
+	})
+	App.messagesCollection = new App.Collections.Messages();
+	App.messagesCollection.fetch({
+		reset: true,
+		success: function(messData) {
+		App.messageView = new App.Views.Message({collection: messData});
 		}
-	});
-})
+	})
+
+	//meetup stuff
+	App.meetupCollection = new App.Collections.MeetupCollection();
+	App.meetupCollection.fetch({
+		reset:true,
+		success: function(meetupData){
+		App.meetupView = new App.Views.MeetupList({collection: meetupData});
+		}
+	})
+});
+
