@@ -64,9 +64,12 @@ App.Views.Signup = Backbone.View.extend({
 		
 		App.meettupView = new App.Views.MeetupList();
 		App.articleView = new App.Views.Article();
-
+		$('#user_create').css('display', 'none');
+		$('#login').css('display', 'none');
 		$('#map').css('display','block');
-		$('.nav').css('display','block');
+		$('.navbar .nav').css('display','block');
+		$('#meetup-container').css('display','block');
+		$('html').css('background','none');
 
 
 		}
