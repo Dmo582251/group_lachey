@@ -63,14 +63,14 @@ html {
 }
 
 .navbar li:hover{
-  color:black;
+  color:white;
   text-decoration: underline;
 
 }
 
 .navbar li{
-  font-family:'Poiret One', cursive;
-  color: white;
+  font-family: 'Arvo', serif;
+  color: black;
   float: left;
   list-style-type: none;
   margin: 5px;
@@ -189,8 +189,8 @@ h1{
   display: none;
   background-color: #CCC;
   position: absolute;
-  margin-left: 53%;
-  margin-top: 47px;
+  margin-left: 35%;
+  margin-top: 95px;
   height: 480px;
   width: 516px;
 }
@@ -287,13 +287,13 @@ top: 90px;
 }
 
 #create_project_form{
-  margin-top: 3%;
+  margin-top: -1%;
   margin-left: -23%;
   padding: 10px;
   font-size: 22px;
   background-color: white;
   font-family: 'Arvo', serif;
-  margin-left: 37%;
+  margin-left: 79%;
 }
 
 
@@ -325,6 +325,57 @@ top: 90px;
   background-color: white;
   font-family:'Arvo', serif;
   margin-left: 25%;
+}
+
+
+/* Message Page Stuff
+-------------------------*/
+#create_message_form{
+  margin-top: 3%;
+  margin-left: -23%;
+  padding: 10px;
+  font-size: 22px;
+  background-color: white;
+  font-family: 'Arvo', serif;
+  margin-left: 37%;
+}
+
+.close-message{
+  margin-top: 3%;
+  margin-left: -23%;
+  padding: 10px;
+  font-size: 22px;
+  background-color: white;
+  font-family: 'Arvo', serif;
+  margin-left: 37%;
+}
+
+.conversation_form{
+ margin-top: 84px;
+margin-left: 40px;
+text-align: center;
+}
+
+.conversation_form h1{
+  text-align: center;
+  font-family: 'Arvo', serif;
+}
+
+.conversation_form input{
+  margin: 10px 5px 0px 5px;
+  font-family:'Poiret One', cursive;
+  font-size: 30px;
+  border-radius: 5%;
+  text-align: center;
+}
+
+#submit_new_conversation{
+  margin-top: 3%;
+  margin-left: -23%;
+  padding: 10px;
+  font-size: 22px;
+  background-color: white;
+  font-family: 'Arvo', serif;
 }
 
 
