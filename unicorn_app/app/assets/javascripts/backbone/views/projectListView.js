@@ -15,6 +15,8 @@ App.Views.Projects = Backbone.View.extend({
             this.makeCreateButton();
             this.firstTime = false;
         }
+        $('#create_project_form').show();
+
     },
     renderAllItems: function(){
         this.collection.each(this.renderProject, this);
@@ -36,11 +38,23 @@ App.Views.Projects = Backbone.View.extend({
     },
     events: {
         'click #projects_button': 'renderAllProjects',
-        'click #create_project_form': 'makeProjectForm'
+        'click #create_project_form': 'makeProjectForm',
+        'click #logout': 'signOut'
+    },
+    signOut: function () {
+        $('#main-content').empty();
+        $('.navbar .nav').css('display', 'none')
+        $('#side-box').empty();
+        $('#map').css('display','none');
+        $('#article-box').empty();
+
+        App.signup = new App.Views.Signup();
+        App.login = new App.Views.Login();
     },
     makeProjectForm: function(){
         var project_form_template = HandlebarsTemplates['projectForm'];
         var compiledTemplate = project_form_template();
         $('#side-box').html(compiledTemplate);
+        $('#create_project_form').hide();
     }
 });

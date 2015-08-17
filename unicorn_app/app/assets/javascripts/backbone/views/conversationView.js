@@ -31,6 +31,7 @@ App.Views.Conversation = Backbone.View.extend({
         $('#article-box').css('display','none');
         $('#main-content').empty();
         $('#side-box').empty();
+        $('#create_project_form').hide();
 		console.log('convo render function works');
 		var conversationData = this.collection.toJSON();
 		var messageData = App.messagesCollection.toJSON();
