@@ -69,7 +69,7 @@ App.Views.Signup = Backbone.View.extend({
 		$('#map').css('display','block');
 		$('.navbar .nav').css('display','block');
 		$('#meetup-container').css('display','block');
-		$('html').css('background','none');
+		// $('html').css('background','none');
 
 
 		}

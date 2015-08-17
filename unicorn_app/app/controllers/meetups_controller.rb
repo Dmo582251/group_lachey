@@ -5,7 +5,7 @@ class MeetupsController < ApplicationController
 	end
 
 	def display
-		search_results = Meetup.search_events(10018) #should have user zip
+		search_results = Meetup.search_events(10010) #should have user zip
 		p search_results
 		render json: search_results
 	end
