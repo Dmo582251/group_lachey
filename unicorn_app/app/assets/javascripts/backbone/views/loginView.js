@@ -36,13 +36,17 @@ App.Views.Login = Backbone.View.extend({
 				}
 			});
 			
-			$('#user_create').empty();//main box
-			$('#login').empty();
+			
+
 
 			App.meettupView = new App.Views.MeetupList();
 			App.articleView = new App.Views.Article();
+			$('#user_create').css('display','none');//main box
+			$('#login').css('display','none');
 			$('#map').css('display','block');
-			$('.nav').css('display','block');
+			$('.navbar .nav').css('display','block');
+			$('#meetup-container').css('display','block');
+			$('html').css('background','none');
 		}
 
 

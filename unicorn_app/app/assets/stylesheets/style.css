@@ -1,6 +1,7 @@
 #side-box{
-position: fixed;
+/*position: fixed;*/
 left: 70%;
+top: 180px;
 position: absolute;
 }
 
@@ -9,7 +10,15 @@ position: absolute;
 top: 0px;
 }
 
+/*#convo-container{
+position: absolute;
+left: 36px;
+top: 180px;
+overflow: scroll;
+height: 500px;
+}*/
 #meetup-container{
+display: none;
 overflow: scroll;
 height: 500px;
 }
@@ -17,18 +26,42 @@ height: 500px;
 overflow: scroll;
 height: 500px;
 }
+#article-box{
+  position: abosolute;
+  top: 200px;
+}
 #article-container{
+width: 45%;
 overflow: scroll;
 height: 400px;
+top: 570px;
+position: fixed
+}
+
+    width: 45%;
+    overflow: scroll;
+    height: 400px;
+    top: 570px;
+    position: fixed;
+
+#main-content{
+position: absolute;
+left: 36px;
+top: 180px;
+overflow: scroll;
+height: 500px;  
 }
 #map{
-	/*	display: none;*/
-	top: 17px;
-	height: 300px;
-	width: 600px;
+	display: none;
+  position: absolute;
+	left: 36px;
+  top: 180px;
+	height: 380px;
+	width: 500px;
 	background-color: #CCC;
 }
-.nav{
+
+.navbar .nav{
 	display: none;
 	float:left;
 }
@@ -60,6 +93,7 @@ html {
 
 /*Nav Bar Stuff*/
 .navbar{
+   display: none;
    list-style-type: none;
     margin: 5px;
     padding: 10px;
@@ -102,10 +136,6 @@ h1{
 }
 
 /*Main Box Div*/
-#main-box{
-  
-}
-
 
 
 /*Side Box Div*/
@@ -114,6 +144,9 @@ h1{
 
 /*Footer*/
 .footer {
+  position: absolute;
+  bottom: 0px;
+  margin: 0 auto;
   clear:      both;
   margin:     0 0 20px;
   padding:    0;

@@ -18,6 +18,7 @@ App.Views.Conversation = Backbone.View.extend({
 	createConversation: function(){
 		var messageForm = HandlebarsTemplates['conversationForm'];
 		var compiledMessageTemplate = messageForm();
+		$('#side-box').empty();
 		$('#side-box').append(compiledMessageTemplate);
 	},
 	makeCreateButton: function() {
@@ -28,6 +29,8 @@ App.Views.Conversation = Backbone.View.extend({
 	render: function(){
 		$('#map').css('display','none');
         $('#article-box').css('display','none');
+        $('#main-content').empty();
+        $('#side-box').empty();
 		console.log('convo render function works');
 		var conversationData = this.collection.toJSON();
 		var messageData = App.messagesCollection.toJSON();
