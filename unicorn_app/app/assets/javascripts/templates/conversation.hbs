@@ -1,15 +1,11 @@
-{{#each convo}}
-		<h3>Conversation Title : {{title}}</h3>
-		<p>Message ID : {{message_id}}</p>
-		<p>Created On : {{created_at}}</p>
-		<p>messages : {{messages}}<p>
- {{/each}}
+<div id='convo-container'>
+	{{#each convo}}
+			<h3>Conversation Title : {{title}}</h3>
+			<p>Message ID : {{message_id}}</p>
+			<p>Created On : {{created_at}}</p>
+			<p>messages : {{messages}}<p>
+	 {{/each}}
 
- {{!-- {{#each mess}}
-<h3>Message Content : {{content}}</h3>
-<p>From : {{user_id}}</p>
-<p>Created On:{{created_at}}</p>
+	 <button class="close-message">Close Messages</button>
 
- {{/each}} --}}
-
- <button class="close-message">Close Messages</button>
+</div>

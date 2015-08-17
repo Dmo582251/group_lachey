@@ -47,6 +47,6 @@ App.Views.MeetupList = Backbone.View.extend({
 		$('#side-box').append(compiledMeetupTemplate);
 		console.log(data.meets)
 		$('#main-box').append(HandlebarsTemplates['map']); 
-	};
+	}
 	
 })

@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
 	  <title>DevOcean</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -22,21 +21,7 @@
 
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
-
 </head>
-
-
-	<div id='application-form'>
-			<section>
-				<input type="text" name='description' placeholder="Yo I didn't create this form properly">
-				<button id='submit'>Submit</button>
-			</section>
-		</div>
-
-<div id ='conversations'></div>
-<div id ='users'></div>
-<div id ='projects'></div>
-</body>
 
 	<body>
 
@@ -52,6 +37,7 @@
 					<li class='nav'	id="profile_button">Profile</li>
 					<li class='nav'	id="projects_button">Projects</li>
 					<li class='nav'	id="conversation">Messages</li>
+					<li class='nav'	id="logout">Logout</li>
 				</ul>
 				
 				<div id="main-content"></div>
@@ -80,6 +66,5 @@
 
 		</div>
 	</body>
-
 </html>
 
