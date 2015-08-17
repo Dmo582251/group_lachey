@@ -25,21 +25,21 @@ App.Views.Logger = Backbone.View.extend({
 		});
 	},
 	events: {
-		'click .logout': 'signOut',
+		// 'click #logout': 'signOut',
 		'click #user': 'userProfile'
 	},
-	signOut: function () {
-		console.log('ready to get outta here');
-		$.ajax({
-			url: '/sessions',
-			type: 'DELETE',
-			success: function () {
-				console.log('session was deleted')
-				var template = HandlebarsTemplates['logger']
-				$('#main-box').html(template);
-			}
-		});
-	},
+	// signOut: function () {
+	// 	console.log('ready to get outta here');
+	// 	$.ajax({
+	// 		url: '/sessions',
+	// 		type: 'DELETE',
+	// 		success: function () {
+	// 			console.log('session was deleted')
+	// 			var template = HandlebarsTemplates['logger']
+	// 			$('#main-box').html(template);
+	// 		}
+	// 	});
+	// },
 	userProfile: function () {
 		console.log('welcome in user');
 		$.ajax({
