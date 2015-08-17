@@ -33,7 +33,7 @@ App.Views.Projects = Backbone.View.extend({
 
     },
     makeCreateButton: function() {
-        var button = $("<button>").text("Create");
+        var button = $("<button>").text("Create New Project");
         button.attr('id', 'create_project_form');
         this.$el.append(button);
     },
