@@ -17,6 +17,7 @@ App.Views.Projects = Backbone.View.extend({
         }
         $('#create_project_form').show();
 
+
     },
     renderAllItems: function(){
         this.collection.each(this.renderProject, this);
@@ -39,7 +40,8 @@ App.Views.Projects = Backbone.View.extend({
     events: {
         'click #projects_button': 'renderAllProjects',
         'click #create_project_form': 'makeProjectForm',
-        'click #logout': 'signOut'
+        'click #logout': 'signOut',
+        'click #profile_button': 'myProfile'
     },
     signOut: function () {
         $('#main-content').empty();
@@ -56,5 +58,16 @@ App.Views.Projects = Backbone.View.extend({
         var compiledTemplate = project_form_template();
         $('#side-box').html(compiledTemplate);
         $('#create_project_form').hide();
+    },
+    myProfile: function () {
+        $('#main-content').empty();
+        $('#side-box').empty();
+        $('#map').css('display','none');
+        $('#create_project_form').css('display', 'none');
+
+
+        var thisProfile = HandlebarsTemplates['profile'];
+        var compiledTemplate = thisProfile();
+        $('#main-content').html(compiledTemplate);
     }
 });
