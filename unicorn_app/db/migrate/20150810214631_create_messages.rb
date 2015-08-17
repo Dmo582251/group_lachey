@@ -2,8 +2,8 @@ class CreateMessages < ActiveRecord::Migration
   def change
     create_table :messages do |t|
       t.text :content
-      t.references :user_id
-      t.references :conversation_id
+      t.references :user
+      t.references :conversation
 
       t.timestamps null: false
     end

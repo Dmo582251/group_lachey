@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>UnicornApp</title>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-	hellloooooo form should be here!!!
+<head>
+
+	  <title>DevOcean</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	  <!-- StyleSheets -->
+	  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+
+	  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src='http://underscorejs.org/underscore-min.js'></script>
+		<script src="http://backbonejs.org/backbone-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+		
+	<meta name="viewport" content="initial-scale=1.0">
+	    <meta charset="utf-8">
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+
+
+</head>
+
 
 	<div id='application-form'>
 			<section>
@@ -21,4 +37,49 @@
 <div id ='users'></div>
 <div id ='projects'></div>
 </body>
+
+	<body>
+
+		<div class="main-title">
+			<b><div class="dev">Dev</div><div class="ocean" style="color:#00E5FF">Ocean</div></b>
+		</div>
+
+		<div class="container" style="clear: both;">
+				
+			<div id='main-box'>
+				<ul class="navbar">
+					<li class='nav' id="home-button">Home</li>
+					<li class='nav'	id="profile_button">Profile</li>
+					<li class='nav'	id="projects_button">Projects</li>
+					<li class='nav'	id="conversation">Messages</li>
+				</ul>
+				
+				<div id="main-content"></div>
+				
+				<div id="map"></div>
+				
+				<div id="article-box"></div>	
+
+
+				<!-- <div id="projects"></div> -->
+			</div>
+
+			<div id='side-box'>
+			</div>
+
+			<div class="footer">
+				<p style="color:#00E5FF"><i class="fa fa-copyright"></i>2015 DevOcean Multimedia Group LLC All Right Reserved</p>
+				<div class="footer-links">
+					<ul>
+					<li><a href="http://mylittlepony.hasbro.com/en-us">About Us</a></li>
+					<li><a href="http://www.nasa.gov/about/career/index.html">Work for Us</a></li>
+					<li><a href="http://powerrangers.com">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
 </html>
+

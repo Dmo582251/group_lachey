@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.text :technology
-      t.references :user_id
+      t.references :user
 
 
       t.timestamps null: false
