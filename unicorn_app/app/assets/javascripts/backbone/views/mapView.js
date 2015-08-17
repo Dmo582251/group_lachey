@@ -2,7 +2,7 @@ App.Views.Map = Backbone.View.extend({
 	el: '#map',
 	initialize: function(){
 		console.log('map view initialized');
-		setTimeout(this.renderMap,4000);
+		setTimeout(this.renderMap,6000);
     },
     renderMap : function(){    
 		var latlng = new google.maps.LatLng(40.740112,-73.990060);
