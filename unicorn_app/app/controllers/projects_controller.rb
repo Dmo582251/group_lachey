@@ -2,7 +2,17 @@ class ProjectsController < ApplicationController
 
 	def index
 		@projects = Project.all
-		render json: @projects
+		project_array = []
+		@projects.each do |project|
+			if(project.user)
+			project_array.push({
+				project: project,
+				username: project.user.username,
+				first_name: project.user.first_name
+				})
+			end
+		end
+		render json: project_array
 	end
 
 	def show

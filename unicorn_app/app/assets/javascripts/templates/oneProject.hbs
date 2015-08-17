@@ -1,6 +1,10 @@
-<h3>Title:{{title}}</h3>
-<p>Description: {{description}}</p>
-<p>Technological Skills: {{technology}}</p>
-<p>Creator: {{this.user_id}}</p>
+<div class="clicked_project">
+	<h1>Clicked Project:</h1>
 
-<button>Contact {{this.user_id}}</button>
+	<h3><b>Title:</b><br>{{project.title}}</h3>
+	<p><b>Description:</b><br>{{project.description}}</p>
+	<p><b>Technological Skills:</b><br> {{project.technology}}</p>
+	<p><b>Creator:</b><br>{{this.username}}</p>
+
+	<button class="contact_user">Contact {{this.first_name}}</button>
+</div>
