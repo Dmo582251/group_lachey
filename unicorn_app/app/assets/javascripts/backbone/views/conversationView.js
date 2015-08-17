@@ -32,6 +32,7 @@ App.Views.Conversation = Backbone.View.extend({
         $('#article-box').css('display','none');
         $('#main-content').empty();
         $('#side-box').empty();
+        $('#create_project_form').hide();
 		console.log('convo render function works');
 		
     	$.get('/conversations/2', function (convoJSON) {

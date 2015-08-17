@@ -9,6 +9,7 @@ App.Views.Main = Backbone.View.extend({
 		//clear divs
 		$('#side-box').empty();
 		$('#main-content').empty();
+		$('#create_project_form').hide();
 		
 		App.meettupView = new App.Views.MeetupList();
 		$('#meetup-container').css('display','block');

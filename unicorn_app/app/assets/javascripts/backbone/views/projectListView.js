@@ -61,6 +61,7 @@ App.Views.Projects = Backbone.View.extend({
     },
     myProfile: function () {
         $('#main-content').empty();
+        $('#article-box').empty();
         $('#side-box').empty();
         $('#map').css('display','none');
         $('#create_project_form').css('display', 'none');
