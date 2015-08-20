@@ -2,22 +2,25 @@ App.Views.Map = Backbone.View.extend({
 	el: '#map',
 	initialize: function(){
 		console.log('map view initialized');
-        
-		var latlng = new google.maps.LatLng(40.7127,-74.0059);
+		setTimeout(this.renderMap,6000);
+    },
+    renderMap : function(){    
+		var latlng = new google.maps.LatLng(40.740112,-73.990060);
 
 		var myOptions ={
-			zoom: 13,
-			center: latlng,
+			zoom: 12,
+			center: {lat: 40.740112, lng: -73.990060},
             panControl: true,
   			zoomControl: true,
-  			mapTypeControl: true,
-			scaleControl: true,
-			overviewMapControl: true
+  			size: (380,500)
+  	// 		mapTypeControl: true,
+			// scaleControl: true,
+			// overviewMapControl: true
             };
 
 		
 		var map = new google.maps.Map(document.getElementById('map'),myOptions);
-		var myLatLng = {lat: 40.7127, lng: -74.0059};
+		var myLatLng = {lat: 40.740112, lng: -73.990060};
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: map
@@ -28,7 +31,7 @@ App.Views.Map = Backbone.View.extend({
           console.log(userJSON);
           gMapData = userJSON;
           gMapData = gMapData.results
-          console.log(gMapData[0].venue.lat);
+          
        	
 		var infowindow = new google.maps.InfoWindow();
 		
@@ -38,7 +41,7 @@ App.Views.Map = Backbone.View.extend({
 			
 			var latitude = (venueTest == undefined) ? myLatLng.lat : gMapData[i].venue.lat;
 			var longitude= (venueTest == undefined) ? myLatLng.lng : gMapData[i].venue.lon;
-			console.log(latitude);
+			
 			var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,

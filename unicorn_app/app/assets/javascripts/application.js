@@ -76,5 +76,6 @@ $(function() {
 	})
 
 	App.map = new App.Views.Map();
+	App.main = new App.Views.Main();
 });
 
