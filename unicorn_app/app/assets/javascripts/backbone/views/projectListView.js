@@ -44,14 +44,24 @@ App.Views.Projects = Backbone.View.extend({
         'click #profile_button': 'myProfile'
     },
     signOut: function () {
-        $('#main-content').empty();
-        $('.navbar .nav').css('display', 'none')
-        $('#side-box').empty();
-        $('#map').css('display','none');
-        $('#article-box').empty();
+        console.log('ready to get outta here');
+        $.ajax({
+            url: '/sessions',
+            type: 'DELETE',
+            dataType: 'json',
+            success: function (response) {
+                console.log('session was deleted')
+                $('#main-content').empty();
+                $('.navbar .nav').css('display', 'none');
+                $('#side-box').empty();
+                $('#map').css('display','none');
+                $('#article-box').empty();
 
-        App.signup = new App.Views.Signup();
-        App.login = new App.Views.Login();
+                App.signup = new App.Views.Signup();
+                App.login = new App.Views.Login();
+            }
+        });
+        console.log("wtf");
     },
     makeProjectForm: function(){
         var project_form_template = HandlebarsTemplates['projectForm'];
